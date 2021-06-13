@@ -2,14 +2,15 @@
 This repository contains implementation of :
 various datastructures using C
 
-### Contents
+## Contents
 * string_utils : custom implementation of standard string utility functions using pointers.
 * file_utils :
-* datastructures :
-    * stack :
-    * queue : 
+* datastructures : implementation of following datastructures with header files and tests.
+    * stack
+    * queue
+    * circular queue
 
-## Installation
+## Execution
 
 ## Usage
 
