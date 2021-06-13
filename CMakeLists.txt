@@ -1,0 +1,9 @@
+cmake_minimum_required(VERSION 3.19)
+project(datastructures C)
+
+set(CMAKE_C_STANDARD 11)
+
+add_executable(string_util src/string_utils/string_utils.c src/string_utils/string_utils.h src/string_utils/string_utils_test.c)
+add_executable(stack src/datastructures/stack/stack.c src/datastructures/stack/stack.h src/datastructures/stack/stack_test.c)
+add_executable(queue src/datastructures/queue/queue.c src/datastructures/queue/queue.h src/datastructures/queue/queue_test.c)
+add_executable(circular_queue src/datastructures/circular_queue/circular_queue.c src/datastructures/circular_queue/circular_queue.h src/datastructures/circular_queue/circular_queue_test.c)
