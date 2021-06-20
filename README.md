@@ -9,6 +9,7 @@ various datastructures using C
     * stack
     * queue
     * circular queue
+    * linked list
 
 ## Execution
 
