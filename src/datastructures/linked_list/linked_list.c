@@ -51,6 +51,11 @@ int add_beginning(LinkedList *ll, int x) {
 }
 
 int add_after_n(LinkedList *ll, int x, int n) {
+    int ll_size = size(*ll);
+    if (n > ll_size) {
+        printf("ERROR: Invalid input value of n = %d. Size of linked list = %d\n", n, ll_size);
+        return 0;
+    }
     Node *new = create_node(x);
     Node *p = ll->start;
     // LL is empty
@@ -112,4 +117,14 @@ void display(LinkedList ll) {
         p = p->next;
     }
     printf("NULL||\n");
+}
+
+int size(LinkedList ll) {
+    int count = 0;
+    Node *p = ll.start;
+    while(p != NULL) {
+        count++;
+        p = p-> next;
+    }
+    return count;
 }

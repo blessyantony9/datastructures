@@ -18,6 +18,7 @@ int main() {
         printf("\n4.Add element after n nodes");
         printf("\n5.Delete element");
         printf("\n6.Display linked list");
+        printf("\n7.Size of linked list");
         printf("\nEnter option ? ");
         scanf("%d", &opt);
 
@@ -52,6 +53,9 @@ int main() {
                 break;
             case 6:
                 display(ll);
+                break;
+            case 7:
+                printf("Size/length of linked list = %d", size(ll));
                 break;
             default:
                 printf("Invalid option");

@@ -61,4 +61,11 @@ int delete(LinkedList *ll, int x);
  * */
 void display(LinkedList ll);
 
+/*
+ * Compute length/size of linked list
+ * Param: LinkedList - linked list whose length is to be computed
+ * Return: int - length/size of linked list
+ * */
+int size(LinkedList ll);
+
 #endif //DATASTRUCTURES_LINKED_LIST_H
