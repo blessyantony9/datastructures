@@ -12,7 +12,7 @@ CQueue create_cqueue() {
 }
 
 int enqueue(CQueue *cq, int x) {
-    if (cq->rear + 1 == cq->front) {
+    if ((cq->rear + 1) % CIRCULAR_QUEUE_SIZE == cq->front) {
         printf("ERROR: Circular queue full\n");
         return 0;
     }
