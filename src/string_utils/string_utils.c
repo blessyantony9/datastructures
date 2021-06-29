@@ -5,7 +5,7 @@
 #include <stdio.h>
 #include "string_utils.h"
 
-int xstrlen_explicit(char *x) {
+int xstrlen_explicit(char* x) {
     int length = 0;
     while(*x != '\0') {
         length++;
@@ -23,12 +23,12 @@ int xstrlen_implicit(char x[]) {
     return length;
 }
 
-int xstrcmp_explicit(char *x, char *y) {
+int xstrcmp_explicit(char* x, char* y) {
     int is_equal = 0;
     int n = xstrlen_implicit(x);
     int i = 0;
     while(i < n) {
-        if (*x != y[i]) { // y[i] = *y
+        if (*x != y[i]) { // y[i] =* y
             is_equal = 1;
             break;
         }
@@ -52,7 +52,7 @@ int xstrcmp_implicit(char x[], char y[]) {
     return is_equal;
 }
 
-void xstrcpy_explicit(char *src, char *dest) {
+void xstrcpy_explicit(char* src, char* dest) {
     do {
         *dest = *src;
         src++; dest++;
@@ -72,7 +72,7 @@ void xstrcpy_implicit(char src[], char dest[]) {
 }
 
 //Reversed the traversing method to use subscript
-void xstrconcat_explicit(char *x, char *y) {
+void xstrconcat_explicit(char* x, char* y) {
     int i = 0;
     while(x[i] != '\0') {
         i++;

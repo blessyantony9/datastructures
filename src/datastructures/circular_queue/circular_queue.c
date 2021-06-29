@@ -11,7 +11,7 @@ CQueue create_cqueue() {
     return cq;
 }
 
-int enqueue(CQueue *cq, int x) {
+int enqueue(CQueue* cq, int x) {
     if ((cq->rear + 1) % CIRCULAR_QUEUE_SIZE == cq->front) {
         printf("ERROR: Circular queue full\n");
         return 0;
@@ -21,7 +21,7 @@ int enqueue(CQueue *cq, int x) {
     return x;
 }
 
-int dequeue(CQueue *cq) {
+int dequeue(CQueue* cq) {
     if (cq->front == cq->rear) {
         printf("ERROR: Circular queue empty\n");
         return 0;

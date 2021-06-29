@@ -13,17 +13,17 @@ LinkedList create_linked_list() {
 }
 
 //utility function to dynamically create Node
-Node * create_node(int x) {
-    Node *new = (Node *)malloc(sizeof(Node));
+Node*  create_node(int x) {
+    Node* new = (Node* )malloc(sizeof(Node));
     new->data = x;
     new->next = NULL;
 
     return new;
 }
 
-int append(LinkedList *ll, int x) {
-    Node *new = create_node(x);
-    Node *p = ll->start;
+int append(LinkedList* ll, int x) {
+    Node* new = create_node(x);
+    Node* p = ll->start;
     // LL is empty
     if (p == NULL) {
         ll->start = new;
@@ -37,9 +37,9 @@ int append(LinkedList *ll, int x) {
     return x;
 }
 
-int add_beginning(LinkedList *ll, int x) {
-    Node *new = create_node(x);
-    Node *p = ll->start;
+int add_beginning(LinkedList* ll, int x) {
+    Node* new = create_node(x);
+    Node* p = ll->start;
     // LL is empty
     if (p == NULL) {
         ll->start = new;
@@ -50,14 +50,14 @@ int add_beginning(LinkedList *ll, int x) {
     return x;
 }
 
-int add_after_n(LinkedList *ll, int x, int n) {
+int add_after_n(LinkedList* ll, int x, int n) {
     int ll_size = size(*ll);
     if (n > ll_size) {
         printf("ERROR: Invalid input value of n = %d. Size of linked list = %d\n", n, ll_size);
         return 0;
     }
-    Node *new = create_node(x);
-    Node *p = ll->start;
+    Node* new = create_node(x);
+    Node* p = ll->start;
     // LL is empty
     if (p == NULL) {
         ll->start = new;
@@ -72,9 +72,9 @@ int add_after_n(LinkedList *ll, int x, int n) {
     return x;
 }
 
-int delete(LinkedList *ll, int x) {
-    Node *p = ll->start;
-    Node *prev;
+int delete(LinkedList* ll, int x) {
+    Node* p = ll->start;
+    Node* prev;
     int found_flag = 0;
     if (p == NULL) {
         printf("ERROR: Linked List empty\n");
@@ -109,8 +109,23 @@ int delete(LinkedList *ll, int x) {
     return x;
 }
 
+void reverse(LinkedList* ll) {
+    Node* curr = ll->start;
+    Node* prev = NULL;
+    Node* next;
+
+    while (curr->next != NULL) {
+        next = curr->next;
+        curr->next = prev;
+        prev = curr;
+        curr = next;
+    }
+    curr->next = prev;
+    ll->start = curr;
+}
+
 void display(LinkedList ll) {
-    Node *p = ll.start;
+    Node* p = ll.start;
     printf("\nLinked List contents :\n||");
     while(p != NULL) {
         printf("%d -> ", p->data);
@@ -121,7 +136,7 @@ void display(LinkedList ll) {
 
 int size(LinkedList ll) {
     int count = 0;
-    Node *p = ll.start;
+    Node* p = ll.start;
     while(p != NULL) {
         count++;
         p = p-> next;

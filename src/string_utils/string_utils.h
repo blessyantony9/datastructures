@@ -11,7 +11,7 @@
  * Returns: int - length of string
  *
  */
-int xstrlen_explicit(char *x);
+int xstrlen_explicit(char* x);
 
 /*
  * Compute length of given string
@@ -28,7 +28,7 @@ int xstrlen_implicit(char x[]);
  * Returns: 0: Equal
  *          1: Not Equal
  */
-int xstrcmp_explicit(char *x, char *y);
+int xstrcmp_explicit(char* x, char* y);
 
 /*
  * Compare two strings for equality

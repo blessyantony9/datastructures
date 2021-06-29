@@ -5,6 +5,8 @@
 #ifndef DATASTRUCTURES_QUEUE_H
 #define DATASTRUCTURES_QUEUE_H
 #define QUEUE_SIZE 10
+
+/*Queue: First In First Out (FIFO)*/
 typedef struct {
     int arr[QUEUE_SIZE];
     int rear;
@@ -20,15 +22,15 @@ Queue create_queue();
 
 /*
  * Insert element into queue
- * Param:   Queue * - queue into which element is to be inserted
+*  Param:   Queue*  - queue into which element is to be inserted
  *          int - element to be inserted
  * Return: int - inserted element
  * */
-int enqueue(Queue *q, int x);
+int enqueue(Queue* q, int x);
 
 /*
  * Remove element from queue
- * Param: Queue * - queue from which element is to be removed
+ * Param: Queue*  - queue from which element is to be removed
  * Return: int - element removed from queue
  * */
 int dequeue(Queue *q);

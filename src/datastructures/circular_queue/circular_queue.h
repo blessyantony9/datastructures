@@ -20,15 +20,15 @@ CQueue create_cqueue();
 
 /*
  * Insert element into cqueue
- * Param:   CQueue * - cqueue into which element is to be inserted
+ * Param:   CQueue*  - cqueue into which element is to be inserted
  *          int - element to be inserted
  * Return: int - inserted element
  * */
-int enqueue(CQueue *cq, int x);
+int enqueue(CQueue* cq, int x);
 
 /*
  * Remove element from cqueue
- * Param: CQueue * - cqueue from which element is to be removed
+ * Param: CQueue*  - cqueue from which element is to be removed
  * Return: int - element removed from cqueue
  * */
 int dequeue(CQueue *cq);

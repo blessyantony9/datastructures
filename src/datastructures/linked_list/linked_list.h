@@ -6,12 +6,12 @@
 #define DATASTRUCTURES_LINKED_LIST_H
 typedef struct node {
     int data;
-    struct node *next;
+    struct node* next;
 }Node;
 
 
 typedef struct {
-    Node *start;
+    Node* start;
 }LinkedList;
 
 /*
@@ -23,19 +23,19 @@ LinkedList create_linked_list();
 
 /*
  * Insert element at the end of linked list
- * Param:   LinkedList * - linked list into which element is to be inserted
+ * Param:   LinkedList*  - linked list into which element is to be inserted
  *          int - element to be inserted
  * Return: int - inserted element
  * */
-int append(LinkedList *ll, int x);
+int append(LinkedList* ll, int x);
 
 /*
  * Insert element at the start of the linked list
- * Param:   LinkedList * - linked list into which element is to be inserted
+ * Param:   LinkedList*  - linked list into which element is to be inserted
  *          int - element to be inserted
  * Return: int - inserted element
  * */
-int add_beginning(LinkedList *ll, int x);
+int add_beginning(LinkedList* ll, int x);
 
 /*
  * Insert element after n elements of the linked list
@@ -44,7 +44,7 @@ int add_beginning(LinkedList *ll, int x);
  *          int - number of nodes after which the new value is to be inserted
  * Return: int - inserted element
  * */
-int add_after_n(LinkedList *ll, int x, int n);
+int add_after_n(LinkedList* ll, int x, int n);
 
 /*
  * Delete an element from linked list
@@ -52,7 +52,14 @@ int add_after_n(LinkedList *ll, int x, int n);
  *        int - element to be deleted
  * Return: int - element deleted from linked list
  * */
-int delete(LinkedList *ll, int x);
+int delete(LinkedList* ll, int x);
+
+/*
+ * Reverse linked list in-place
+ * Param: LinkedList * - linked list to be reversed
+ * Return: void*/
+void reverse(LinkedList* ll);
+
 
 /*
  * Print contents of linked list

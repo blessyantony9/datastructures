@@ -17,8 +17,9 @@ int main() {
         printf("\n3.Add element at beginning");
         printf("\n4.Add element after n nodes");
         printf("\n5.Delete element");
-        printf("\n6.Display linked list");
-        printf("\n7.Size of linked list");
+        printf("\n6.Reverse linked list");
+        printf("\n7.Display linked list");
+        printf("\n8.Size of linked list");
         printf("\nEnter option ? ");
         scanf("%d", &opt);
 
@@ -52,9 +53,14 @@ int main() {
                 printf("\nElement removed = %d", delete(&ll, x));
                 break;
             case 6:
+                reverse(&ll);
+                printf("\nLinked list reverse complete.");
                 display(ll);
                 break;
             case 7:
+                display(ll);
+                break;
+            case 8:
                 printf("Size/length of linked list = %d", size(ll));
                 break;
             default:

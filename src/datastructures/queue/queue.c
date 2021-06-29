@@ -12,7 +12,7 @@ Queue create_queue() {
     return q;
 }
 
-int enqueue(Queue *q, int x) {
+int enqueue(Queue* q, int x) {
     if (q->rear == QUEUE_SIZE-1) {
         printf("ERROR: Queue full\n");
         return 0;
@@ -21,7 +21,7 @@ int enqueue(Queue *q, int x) {
     return x;
 }
 
-int dequeue(Queue *q) {
+int dequeue(Queue* q) {
     if (q->front == q->rear) {
         printf("ERROR: Queue empty\n");
         return 0;

@@ -11,7 +11,7 @@ Stack create_stack() {
     return stack;
 }
 
-int push(Stack *s, int x) {
+int push(Stack* s, int x) {
     if (s->top == (STACK_SIZE - 1)) {
         printf("ERROR: Stack full\n");
         return 0;
@@ -20,7 +20,7 @@ int push(Stack *s, int x) {
     return x;
 }
 
-int pop(Stack *s) {
+int pop(Stack* s) {
     if (s->top == -1) {
         printf("ERROR: Stack empty\n");
         return 0;

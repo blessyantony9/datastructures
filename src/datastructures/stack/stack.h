@@ -5,6 +5,8 @@
 #ifndef DATASTRUCTURES_STACK_H
 #define DATASTRUCTURES_STACK_H
 #define STACK_SIZE 100
+
+/*STACK: Last In First Out (LIFO)*/
 typedef struct {
     int arr[STACK_SIZE];
     int top;
@@ -19,18 +21,18 @@ Stack create_stack();
 
 /*
  * Insert element into stack
- * Param:   Stack * - stack into which element is to be inserted
+ * Param:   Stack*  - stack into which element is to be inserted
  *          int - element to be inserted
  * Return: int - inserted element
  * */
-int push(Stack *s, int x);
+int push(Stack* s, int x);
 
 /*
  * Remove element from stack
- * Param: Stack * - stack from which element is to be removed
+ * Param: Stack*  - stack from which element is to be removed
  * Return: int - element removed from stack
  * */
-int pop(Stack *s);
+int pop(Stack* s);
 
 /*
  * Print contents of stack
