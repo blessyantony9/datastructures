@@ -12,30 +12,30 @@ typedef struct {
 } CQueue;
 
 /*
- * Instantiate a cqueue
+ * Instantiate a circular queue
  * Param: None
  * Return: CQueue
  * */
 CQueue create_cqueue();
 
 /*
- * Insert element into cqueue
- * Param:   CQueue*  - cqueue into which element is to be inserted
+ * Insert element into circular queue
+ * Param:   CQueue*  - circular queue into which element is to be inserted
  *          int - element to be inserted
  * Return: int - inserted element
  * */
 int enqueue(CQueue* cq, int x);
 
 /*
- * Remove element from cqueue
- * Param: CQueue*  - cqueue from which element is to be removed
- * Return: int - element removed from cqueue
+ * Remove element from circular queue
+ * Param: CQueue*  - circular queue from which element is to be removed
+ * Return: int - element removed from circular queue
  * */
-int dequeue(CQueue *cq);
+int dequeue(CQueue* cq);
 
 /*
- * Print contents of cqueue
- * Param: CQueue - cqueue whose contents are to be viewed
+ * Print contents of circular queue
+ * Param: CQueue - circular queue whose contents are to be viewed
  * Return: void
  * */
 void display(CQueue cq);

@@ -10,3 +10,4 @@ add_executable(circular_queue src/datastructures/circular_queue/circular_queue.c
 add_executable(linked_list src/datastructures/linked_list/linked_list.c src/datastructures/linked_list/linked_list.h src/datastructures/linked_list/linked_list_test.c src/datastructures/linked_list/linked_list_test.c)
 add_executable(stack_using_linked_list src/datastructures/linked_list_applications/stack_using_linked_list.c)
 add_executable(queue_using_linked_list src/datastructures/linked_list_applications/queue_using_linked_list.c)
+add_executable(priority_queue src/datastructures/priority_queue/priority_queue.c src/datastructures/priority_queue/priority_queue.h src/datastructures/priority_queue/priority_queue_test.c)
